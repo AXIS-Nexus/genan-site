@@ -1251,3 +1251,23 @@ select {
     display: none;
   }
 }
+
+
+@media (max-width: 767px) {
+  .menu-cat--season .mi-name {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+  }
+
+  .menu-cat--season .badge-sp,
+  .menu-cat--season .badge-su,
+  .menu-cat--season .badge-rec,
+  .menu-cat--season .b-ume,
+  .menu-cat--season .b-lem {
+    display: inline-flex;
+    margin-left: 0;
+    white-space: nowrap;
+  }
+}
