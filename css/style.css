@@ -440,6 +440,7 @@ select {
 }
 
 /* こだわり */
+/* こだわり */
 .kd-grid {
   display: grid;
   grid-template-columns: 1fr;
@@ -454,17 +455,27 @@ select {
   box-shadow: 0 1px 6px rgba(0, 0, 0, .06);
 }
 
-.kd-icon {
-  font-size: 1.3rem;
-  color: var(--c-secondary);
+.kd-head {
+  display: flex;
+  align-items: center;
+  gap: 8px;
   margin-bottom: 8px;
+}
+
+.kd-icon {
+  font-size: 1.05rem;
+  color: var(--c-secondary);
+  margin: 0;
+  line-height: 1;
+  flex-shrink: 0;
 }
 
 .kd-title {
   font-family: var(--font-serif);
   font-size: .98rem;
   color: var(--c-primary);
-  margin: 0 0 6px;
+  margin: 0;
+  line-height: 1.4;
 }
 
 .kd-text {
@@ -472,6 +483,12 @@ select {
   color: var(--c-text-sub);
   line-height: 1.85;
   margin: 0;
+}
+
+@media (min-width: 768px) {
+  .kd-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 
 /* フィーチャーカード */
