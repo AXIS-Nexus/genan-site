@@ -1255,11 +1255,25 @@ select {
 }
 
 @media (min-width: 1024px) {
+  .hdr-in {
+    display: grid;
+    grid-template-columns: 220px 1fr 220px;
+    align-items: center;
+  }
+
+  .logo {
+    justify-self: start;
+  }
+
   .nav {
     display: flex;
-    gap: 16px;
-    flex: 1;
+    gap: 22px;
     justify-content: center;
+    align-items: center;
+  }
+
+  .hdr-actions {
+    justify-self: end;
   }
 
   .hdr-tel {
