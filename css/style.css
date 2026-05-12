@@ -97,22 +97,24 @@ select {
 }
 
 .logo {
-  font-family: var(--font-serif);
-  font-size: 1.05rem;
-  font-weight: 700;
-  color: var(--c-primary);
-  letter-spacing: .06em;
-  line-height: 1.2;
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+  line-height: 1;
   flex-shrink: 0;
-  white-space: nowrap;
 }
 
-.logo small {
+.logo-img {
   display: block;
-  font-size: .50rem;
-  font-weight: 400;
-  color: var(--c-text-sub);
-  margin-top: 1px;
+  width: 165px;
+  height: auto;
+  background: transparent;
+}
+
+@media (max-width: 768px) {
+  .logo-img {
+    width: 128px;
+  }
 }
 
 .nav {
