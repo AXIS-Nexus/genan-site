@@ -5349,3 +5349,111 @@ select {
     opacity: .14 !important;
   }
 }
+/* =========================================================
+   アクセスページ：店舗外観 + アクセス情報 2カラム表示
+========================================================= */
+
+.access-detail-section {
+  background-color: #FAF6F0;
+  padding: 52px 0 58px;
+}
+
+.access-detail-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 0.92fr) minmax(0, 1.08fr);
+  gap: 28px;
+  align-items: stretch;
+}
+
+.access-detail-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.access-detail-cards .ac-block {
+  margin-bottom: 0;
+  background: #fff;
+}
+
+.access-detail-cards .ac-block-body {
+  min-height: 96px;
+}
+
+.access-shop-photo {
+  margin: 0;
+  overflow: hidden;
+  border: 1px solid var(--c-border);
+  border-radius: var(--r);
+  background: #fff;
+  box-shadow: 0 6px 18px rgba(46, 74, 62, .08);
+}
+
+.access-shop-photo img {
+  width: 100%;
+  height: 100%;
+  min-height: 360px;
+  max-height: 470px;
+  object-fit: cover;
+  object-position: center 58%;
+}
+
+.access-shop-photo figcaption {
+  padding: 13px 16px 15px;
+  color: var(--c-primary);
+  font-family: var(--font-serif);
+  font-size: .88rem;
+  font-weight: 700;
+  line-height: 1.7;
+  letter-spacing: .06em;
+  text-align: center;
+  background:
+    linear-gradient(rgba(255, 255, 255, .76), rgba(255, 255, 255, .76)),
+    url("../images/washi-hero-bg.png");
+  background-repeat: repeat;
+  background-size: 900px auto;
+  border-top: 1px solid rgba(218, 204, 180, .65);
+}
+
+/* タブレット以下：縦並び */
+@media (max-width: 900px) {
+  .access-detail-layout {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .access-shop-photo {
+    order: -1;
+  }
+
+  .access-shop-photo img {
+    min-height: 260px;
+    max-height: none;
+    aspect-ratio: 16 / 10;
+  }
+}
+
+/* スマホ：余白を少し抑える */
+@media (max-width: 767px) {
+  .access-detail-section {
+    padding: 38px 0 44px;
+  }
+
+  .access-detail-layout {
+    gap: 22px;
+  }
+
+  .access-shop-photo img {
+    min-height: 0;
+    aspect-ratio: 4 / 3;
+  }
+
+  .access-shop-photo figcaption {
+    font-size: .82rem;
+    padding: 11px 14px 13px;
+  }
+
+  .access-detail-cards .ac-block-body {
+    min-height: auto;
+  }
+}
