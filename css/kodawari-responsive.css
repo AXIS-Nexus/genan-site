@@ -1425,3 +1425,209 @@
     height: 210px !important;
   }
 }
+/* =========================================================
+   こだわりページ 03：JAピンネ「牡丹そば」のぼり画像
+========================================================= */
+
+.kodawari-material__photo {
+  width: min(100%, 760px);
+  margin: 28px auto 0;
+  overflow: hidden;
+  border-radius: 6px;
+  box-shadow: 0 6px 18px rgba(46, 74, 62, .08);
+}
+
+.kodawari-material__photo img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+/* スマホ表示 */
+@media (max-width: 767px) {
+  .kodawari-material__photo {
+    width: 100%;
+    margin-top: 26px;
+    border-radius: 4px;
+  }
+}
+/* =========================================================
+   こだわりページ 03：牡丹そば画像 + ポイントカード
+========================================================= */
+
+.kodawari-material__visual {
+  display: grid;
+  grid-template-columns: minmax(0, 1.05fr) minmax(360px, 0.95fr);
+  gap: 32px;
+  align-items: stretch;
+  margin-top: 32px;
+}
+
+.kodawari-material__photo {
+  width: 100%;
+  margin: 0;
+  overflow: hidden;
+  border-radius: 6px;
+  box-shadow: 0 6px 18px rgba(46, 74, 62, 0.08);
+}
+
+.kodawari-material__photo img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  min-height: 300px;
+  object-fit: cover;
+  object-position: center center;
+}
+
+.kodawari-material__visual .kodawari-points {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+  margin: 0;
+  align-content: center;
+}
+
+.kodawari-material__visual .kodawari-points__item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 92px;
+  padding: 18px 16px;
+  border: 1px solid rgba(46, 74, 62, 0.34);
+  background: rgba(255, 255, 255, 0.42);
+  color: #284f41;
+  font-family: "Noto Serif JP", serif;
+  font-size: 1.05rem;
+  font-weight: 600;
+  line-height: 1.6;
+  letter-spacing: 0.06em;
+  text-align: center;
+}
+
+/* スマホ表示 */
+@media (max-width: 767px) {
+  .kodawari-material__visual {
+    display: block;
+    margin-top: 28px;
+  }
+
+  .kodawari-material__photo {
+    width: 100%;
+    margin: 0 0 24px;
+    border-radius: 4px;
+  }
+
+  .kodawari-material__photo img {
+    width: 100%;
+    height: auto;
+    min-height: 0;
+    object-fit: contain;
+  }
+
+  .kodawari-material__visual .kodawari-points {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 14px;
+    margin: 0;
+  }
+
+  .kodawari-material__visual .kodawari-points__item {
+    min-height: 72px;
+    padding: 16px 14px;
+    font-size: 1rem;
+  }
+}
+
+/* =========================================================
+   こだわりページ 04：鴨せいろセクション左右反転
+   PC：左に文章 / 右に画像
+   SP：縦並びを維持
+========================================================= */
+
+@media (min-width: 768px) {
+  .kodawari-duck {
+    display: grid;
+    grid-template-columns: minmax(420px, 0.95fr) minmax(0, 1.05fr);
+    gap: 40px;
+    align-items: stretch;
+  }
+
+  .kodawari-duck__content {
+    order: 1;
+  }
+
+  .kodawari-duck__media {
+    order: 2;
+    margin: 0;
+  }
+
+  .kodawari-duck__media img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    min-height: 420px;
+    object-fit: cover;
+    object-position: center center;
+  }
+}
+
+/* =========================================================
+   04 鴨せいろ画像：スマホ時の余分な下余白を削除
+========================================================= */
+
+@media (max-width: 767px) {
+  .kodawari-duck__media {
+    width: 100%;
+    margin: 0 0 32px;
+    padding: 0;
+    height: auto;
+    min-height: 0;
+    background: transparent;
+    box-shadow: none;
+  }
+
+  .kodawari-duck__media img {
+    display: block;
+    width: 100%;
+    height: auto;
+    min-height: 0;
+    object-fit: contain;
+    object-position: center center;
+    border-radius: 6px;
+  }
+}
+/* =========================================================
+   04 鴨せいろ画像：スマホ時の余白完全修正
+   原因：過去の aspect-ratio: 1 / 1.22 が残っていたため
+========================================================= */
+
+@media (max-width: 767px) {
+  .kodawari-duck__media {
+    display: block !important;
+    width: calc(100% - 48px) !important;
+    height: auto !important;
+    min-height: 0 !important;
+    aspect-ratio: auto !important;
+    margin: 0 auto 32px !important;
+    padding: 0 !important;
+    overflow: hidden !important;
+    border-radius: 4px !important;
+    background: transparent !important;
+    box-shadow: 0 4px 14px rgba(46, 74, 62, .08) !important;
+    line-height: 0 !important;
+  }
+
+  .kodawari-duck__media img {
+    display: block !important;
+    width: 100% !important;
+    height: auto !important;
+    min-height: 0 !important;
+    aspect-ratio: auto !important;
+    object-fit: initial !important;
+    object-position: center center !important;
+    background: transparent !important;
+    border-radius: 4px !important;
+  }
+}

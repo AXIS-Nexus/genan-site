@@ -2812,27 +2812,33 @@ select {
   width: 100%;
 }
 
+/* =========================================================
+   こだわりページ 03：牡丹そばポイントカード
+========================================================= */
+
 .kodawari-points {
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 14px;
-  margin-top: 24px;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px 20px;
+  margin-top: 32px;
 }
 
 .kodawari-points__item {
+  min-height: 72px;
+  padding: 18px 20px;
+  border: 1px solid rgba(46, 74, 62, 0.35);
+  border-radius: 4px;
+  background: rgba(255, 255, 255, 0.28);
+  color: #244d3f;
+  font-family: "Noto Serif JP", serif;
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  line-height: 1.6;
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: 72px;
-  padding: 14px 16px;
   text-align: center;
-  font-family: var(--font-serif);
-  font-size: .96rem;
-  line-height: 1.65;
-  color: var(--c-primary);
-  background: rgba(250, 246, 240, .88);
-  border: 1px solid rgba(46, 74, 62, .24);
-  border-radius: 4px;
 }
 
 .kodawari-cta {
