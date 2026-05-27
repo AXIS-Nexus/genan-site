@@ -5457,3 +5457,49 @@ select {
     min-height: auto;
   }
 }
+/* =========================================================
+   営業時間補足：売り切れ次第閉店の注意書き
+========================================================= */
+
+/* =========================================================
+   営業時間補足：売り切れ次第閉店
+========================================================= */
+
+.business-note {
+  display: block !important;
+  margin-top: 10px !important;
+  color: #8a6a35 !important;
+  font-size: 0.9rem !important;
+  font-weight: 500 !important;
+  line-height: 1.8 !important;
+}
+
+@media (max-width: 767px) {
+  .business-note {
+    margin-top: 8px !important;
+    font-size: 0.84rem !important;
+    line-height: 1.75 !important;
+  }
+}
+/* =========================================================
+   営業時間補足：売り切れ次第閉店
+========================================================= */
+
+.business-note,
+.note--closing {
+  display: block;
+  margin-top: 8px;
+  color: #7b5f32;
+  font-size: 0.88rem;
+  font-weight: 500;
+  line-height: 1.75;
+}
+
+@media (max-width: 767px) {
+  .business-note,
+  .note--closing {
+    margin-top: 7px;
+    font-size: 0.82rem;
+    line-height: 1.7;
+  }
+}

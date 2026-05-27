@@ -1631,3 +1631,23 @@
     border-radius: 4px !important;
   }
 }
+/* =========================================================
+   こだわりページ：03セクションの特徴カード文字調整
+   PC時に「JAピンネ『牡丹そば』」を1行表示
+========================================================= */
+
+@media (min-width: 768px) {
+  .kodawari-points__item {
+    white-space: nowrap;
+    font-size: clamp(0.95rem, 1.1vw, 1.05rem);
+    letter-spacing: 0.03em;
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+}
+
+@media (max-width: 767px) {
+  .kodawari-points__item {
+    white-space: normal;
+  }
+}
